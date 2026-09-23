@@ -1,5 +1,6 @@
 .git
 CMakePresets.json
+CMakeSettings.json
 out
 .vs
 build
