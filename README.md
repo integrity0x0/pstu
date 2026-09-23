@@ -16,3 +16,5 @@
 | 7  | lab7     | ---        | ---       |
 | 8  | lab8     | ---        | ---       |
 | 9  | lab9     | ---        | ---       |
+
+![](https://github.com/integrity0x0/pstu/blob/main/eminem.jpg?raw=true)
