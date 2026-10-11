@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(lab0
-    bachelor/informatics/sem1/lab0.cpp)
+    sem1/lab0.cpp)
 
 add_executable(lab1 
-    bachelor/informatics/sem1/lab1.cpp)
+    sem1/lab1.cpp)
