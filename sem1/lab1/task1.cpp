@@ -1,40 +1,6 @@
 #include <iomanip>
 #include <iostream>
 
-template <typename T>
-[[nodiscard]] constexpr T Sqr(T x) {
-  return x * x;
-}
-
-template <typename T>
-[[nodiscard]] constexpr T Formula(T a, T b) {
-  T diff = a - b;
-  std::cout << "a - b = " << diff << "\n";
-
-  T diffSqr = Sqr(diff);
-  std::cout << "(a - b)^2 = " << diffSqr << "\n";
-
-  T aSqr = Sqr(a);
-  std::cout << "a^2 = " << aSqr << "\n";
-
-  T twoAB = 2 * a * b;
-  std::cout << "2ab = " << twoAB << "\n";
-
-  T rightPart = aSqr - twoAB;
-  std::cout << "a^2 - 2ab = " << rightPart << "\n";
-
-  T numerator = diffSqr - rightPart;
-  std::cout << "numerator = " << numerator << "\n";
-
-  T denominator = Sqr(b);
-  std::cout << "b^2 = " << denominator << "\n";
-
-  T result = numerator / denominator;
-  std::cout << "result = " << result << "\n";
-
-  return result;
-}
-
 int main() {
   constexpr float fA = 1000.0f, fB = 0.0001f;
   constexpr double dA = 1000.0, dB = 0.0001;
@@ -42,11 +8,56 @@ int main() {
   std::cout << std::setprecision(7);
 
   std::cout << "--- float ---\n";
-  Formula(fA, fB);
+
+  float fDiff = fA - fB;
+  std::cout << "a - b = " << fDiff << "\n";
+
+  float fDiffSqr = fDiff * fDiff;
+  std::cout << "(a - b)^2 = " << fDiffSqr << "\n";
+
+  float fASqr = fA * fA;
+  std::cout << "a^2 = " << fASqr << "\n";
+
+  float fTwoAB = 2 * fA * fB;
+  std::cout << "2ab = " << fTwoAB << "\n";
+
+  float fRightPart = fASqr - fTwoAB;
+  std::cout << "a^2 - 2ab = " << fRightPart << "\n";
+
+  float fNumerator = fDiffSqr - fRightPart;
+  std::cout << "numerator = " << fNumerator << "\n";
+
+  float fDenominator = fB * fB;
+  std::cout << "b^2 = " << fDenominator << "\n";
+
+  float fResult = fNumerator / fDenominator;
+  std::cout << "result = " << fResult << "\n";
 
   std::cout << "\n--- double ---\n";
-  Formula(dA, dB);
+
+  double dDiff = dA - dB;
+  std::cout << "a - b = " << dDiff << "\n";
+
+  double dDiffSqr = dDiff * dDiff;
+  std::cout << "(a - b)^2 = " << dDiffSqr << "\n";
+
+  double dASqr = dA * dA;
+  std::cout << "a^2 = " << dASqr << "\n";
+
+  double dTwoAB = 2 * dA * dB;
+  std::cout << "2ab = " << dTwoAB << "\n";
+
+  double dRightPart = dASqr - dTwoAB;
+  std::cout << "a^2 - 2ab = " << dRightPart << "\n";
+
+  double dNumerator = dDiffSqr - dRightPart;
+  std::cout << "numerator = " << dNumerator << "\n";
+
+  double dDenominator = dB * dB;
+  std::cout << "b^2 = " << dDenominator << "\n";
+
+  double dResult = dNumerator / dDenominator;
+  std::cout << "result = " << dResult << "\n";
 
   return 0;
 }
-
