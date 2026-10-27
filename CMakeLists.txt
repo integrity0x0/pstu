@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(lab0
-    sem1/lab0.cpp)
+add_executable(lab2
+    sem1/lab2.cpp)
 
-add_executable(lab1 
-    sem1/lab1.cpp)
+add_executable(lab3 
+     sem1/lab3.cpp)
