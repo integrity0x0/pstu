@@ -11,3 +11,6 @@ add_executable(lab2
 
 add_executable(lab3 
      sem1/lab3.cpp)
+
+add_executable(lab4
+     sem1/lab4.cpp)

@@ -22,7 +22,7 @@ int main() {
     p = t;
     size_t k = 0;
     double term = p;
-    while (std::fabs(term) >= kE) {
+    while (std::abs(term) >= kE) {
       se += term;
       ++k;
       p *= t2;
